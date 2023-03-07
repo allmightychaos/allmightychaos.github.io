@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap");
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(254, 250, 250);
+  font-family: "Source Code Pro", monospace;
+}
+
+.header, .paragraph {
+  width: 600px;
+  min-width: 600px;
+  max-width: 600px;
+}
+
+.paragraph span {
+  margin-left: 75px;
+  font-size: 0.75rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 35%;
+}
+.header h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+.header :nth-child(2) {
+  margin-left: 0.5rem;
+}
+
+.table-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  flex-grow: 1;
+}
+.table-container .table {
+  border: 2px solid rgba(0, 0, 0, 0.0625);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+.table-container .table a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  width: 600px;
+}
+
+.hexa-color {
+  flex: 1;
+}
+.hexa-color .input {
+  width: 271.5px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(0, 0, 0, 0.125);
+  font-family: "Source Code Pro", monospace;
+  transition: box-shadow 0.15s ease-in;
+  background: #fff;
+  padding: 0 16px;
+  display: block;
+  outline: none;
+  height: 48px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 0;
+}
+.hexa-color .input:hover {
+  box-shadow: 0 4px 12px 0 rgba(255, 0, 0, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
+.hexa-color .input #colorPreview {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(50, 50, 50, 0.5019607843);
+  border: 1px solid rgb(200, 200, 200);
+}
+.hexa-color .input #colorPreview:hover {
+  cursor: copy;
+}
+.hexa-color .input input {
+  width: 180px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(0, 0, 0, 0.125);
+  font-family: "Source Code Pro", monospace;
+  transition: box-shadow 0.15s ease-in;
+  background: #fff;
+  padding: 0 16px;
+  display: block;
+  outline: none;
+  height: 48px;
+  border: 0;
+  box-shadow: none;
+  flex: 1;
+}
+.hexa-color .input input:hover {
+  box-shadow: 0 4px 12px 0 rgba(255, 0, 0, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
+.hexa-color .input input:hover {
+  box-shadow: none;
+}
+.hexa-color .input input:focus {
+  box-shadow: none;
+}
+
+.transparency {
+  width: 287.5px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.transparency #input {
+  width: 255.5px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(0, 0, 0, 0.125);
+  font-family: "Source Code Pro", monospace;
+  transition: box-shadow 0.15s ease-in;
+  background: #fff;
+  padding: 0 16px;
+  display: block;
+  outline: none;
+  height: 48px;
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+.transparency #input:hover {
+  box-shadow: 0 4px 12px 0 rgba(255, 0, 0, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
+.transparency #input:hover {
+  box-shadow: 0 4px 12px 0 rgba(255, 0, 0, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
+.transparency #input input {
+  border: solid 1px rgba(0, 0, 255, 0.1254901961);
+  border-radius: 8px;
+  height: 7px;
+  width: 356px;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  transition: background 450ms ease-in;
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.1254901961) 50%, #fff 50%);
+}
+.transparency #input input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(223, 223, 250);
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.transparency #input input::-webkit-slider-thumb:active {
+  border: 1px solid rgba(50, 50, 50, 0.1);
+}
+.transparency #input input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(223, 223, 250);
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+.transparency #input input::-moz-range-thumb:active {
+  border: 1px solid rgba(50, 50, 50, 0.1);
+}
+.transparency #input #transp-value {
+  width: 78.8px;
+  text-align: right;
+}
+.transparency #input span {
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+}
+
+.result {
+  width: 568px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(0, 0, 0, 0.125);
+  font-family: "Source Code Pro", monospace;
+  transition: box-shadow 0.15s ease-in;
+  background: #fff;
+  padding: 0 16px;
+  display: block;
+  outline: none;
+  height: 48px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16px;
+  transition: all ease-in-out;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.result:hover {
+  box-shadow: 0 4px 12px 0 rgba(255, 0, 0, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
+.result:active {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 255, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
+.result .resultColor {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 600px;
+}
+.result .resultColor .resultEquation {
+  position: absolute;
+  right: 312.5px;
+}
+.result .resultColor .resultEquation:hover {
+  cursor: default;
+}
+.result .resultColor .equal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.result .resultColor .equal:hover {
+  cursor: default;
+}
+.result .resultColor #resultHexa1 {
+  color: black;
+}
+.result .resultColor #resultHexa1:hover {
+  cursor: copy;
+}
+.result .resultColor #resultHexa1 #resultHexa {
+  color: #d8605b;
+}
+.result .resultColor #resultTransp {
+  color: #487ca5;
+}
+.result .resultColor #resultTransp:hover {
+  cursor: copy;
+}
+.result .resultColor #resultFull {
+  position: absolute;
+  left: 312.5px;
+}
+.result .resultColor #resultFull #orange {
+  color: #d8605b;
+}
+.result .resultColor #resultFull #blue {
+  color: #487ca5;
+}
+.result .resultColor #resultFull:hover {
+  cursor: copy;
+}
+
+.paragraph-under-result p {
+  font-size: 12px;
+}
+
+footer {
+  position: absolute;
+  bottom: 15px;
+  font-size: 15px;
+  width: 600px;
+  border-top: 2px solid rgb(230, 230, 230);
+  padding-top: 10px;
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+footer img {
+  width: 15px;
+  height: 15px;
+}
+footer span {
+  text-decoration: underline;
+}
+
+/*
+----------------------------------------------
+*/
+#converter {
+  display: block;
+  width: 129px;
+  height: 15px;
+  font-size: 12px;
+}
+
+.table-hex {
+  width: 600px;
+  margin-top: 25px;
+  border-top: 2px solid rgba(0, 0, 0, 0.0625);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.0625);
+}
+.table-hex table {
+  border-spacing: 0;
+}
+.table-hex thead td {
+  font-weight: 800;
+  padding: 8px;
+}
+.table-hex thead td:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.0625);
+  width: 126px;
+  text-align: right;
+}
+.table-hex thead td:last-child {
+  width: 474px;
+}
+.table-hex tbody td {
+  padding: 8px;
+}
+.table-hex tbody td:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.0625);
+  border-right: 1px solid rgba(0, 0, 0, 0.0625);
+  width: 126px;
+  text-align: right;
+}
+.table-hex tbody td:last-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.0625);
+  width: 474px;
+}
+
+#paragraph-table {
+  margin-top: 25px;
+}
+
+#footer-table {
+  position: static;
+  margin-top: 50px;
+}/*# sourceMappingURL=style.css.map */

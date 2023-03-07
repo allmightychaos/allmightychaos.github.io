@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans.hexa \ Transparency to Hexa-Colors</title>
+
+    <link rel="stylesheet" href="/Projects/hexatrans/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css"> <!-- For local editing-->
+</head>
+<body onload="setValue()">
+    <div class="header">
+        <h1>Trans.hexa</h1>
+
+        <div class="table-container">
+            <div class="table">
+                <a href="/transparency-table.html">Transparency Table</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="paragraph">
+        <p>Enter a Hexadecimal color code and the choose the percentage<br>of the transparency-value:<span id="smaller">(with or without transparency-code)</span></p>
+    </div>
+
+    <div class="color">
+        <div class="hexa-color">
+            <div class="input" id="input2">
+                <input placeholder="#323232 or #32323280">
+                <div id="colorPreview"></div>
+            </div>
+        </div>
+        <div class="transparency">
+            <div id="input">
+                <input type="range" id="transp-slider" min="0" max="100" value="50">
+                <span id="transp-value" contenteditable="true">50</span>
+                <span>%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="result">
+        <div class="resultColor">
+            <div class="resultEquation">
+                <span id="resultHexa1">#<a id="resultHexa">323232</a></span>
+                <span> + </span>
+                <span id="resultTransp">80</span>
+            </div>
+            <div class="equal">
+                <span> = </span>
+            </div>
+            <span id="resultFull">#<a id="orange">323232</a><a id="blue">80</a></span>
+        </div>
+    </div>
+
+    <div class="paragraph-under-result">
+        <p>Click once on a value to copy the result.</p>
+    </div>
+
+    <footer>
+        <a href="www.github.com/allmightychaos/hexa-transparency">Made with <img src="https://em-content.zobj.net/thumbs/120/apple/325/red-heart_2764-fe0f.png" alt="Love"> by <span id="td">Chaos</span></a>
+    </footer>
+
+    <script src="/Projects/hexatrans/src/app.js"></script>
+    <script src="/src/app.js"></script> <!-- For local editing-->
+</body>
+</html>

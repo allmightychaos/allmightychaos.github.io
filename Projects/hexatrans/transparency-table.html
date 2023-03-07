@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans.hexa \ Transparency to Hexa-Colors</title>
+
+    <link rel="stylesheet" href="/Projects/hexatrans/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css"> <!-- For local editing-->
+</head>
+<body>
+    <div class="header">
+        <h1>Trans.hexa</h1>
+
+        <div class="table-container">
+            <div class="table">
+                <a id="converter" href="/hexatrans.html">Hex Converter</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="paragraph">
+        <p>Find which percentage corresponds to the transparency values<br>in the table down below:</p>
+    </div>
+
+    <div class="table-hex">
+        <table>
+            <thead>
+                <tr>
+                    <td class="hexHeader">Percentage</td>
+                    <td class="hexHeader">Hex Code</td>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <div class="paragraph-under-result" id="paragraph-table">
+        <p>Click once on a value to copy the result.</p>
+    </div>
+
+    <footer id="footer-table">
+        <a href="www.github.com/allmightychaos/hexa-transparency">Made with <img src="https://em-content.zobj.net/thumbs/120/apple/325/red-heart_2764-fe0f.png" alt="Love"> by <span id="td">Chaos</span></a>
+    </footer>
+
+    <script src="src/table.js"></script>
+</body>
+</html>
