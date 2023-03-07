@@ -55,15 +55,19 @@ inputField.addEventListener('input', function() {
     if (!validHexRegex.test(hexValue)) {
         inputField.value = hexValue.slice(0, -1);
         hexValue = inputField.value;
+        hexValueLength = hexValue.length;
     }
 
-    if (hexValue[0] !== '#') {
+    if (hexValue[0] != '#') {
         inputField.value = '#' + hexValue;
+        hexValue = inputField.value;
+        hexValueLength = hexValue.length;
     }
 
     if (hexValue[hexValueLength - 1] == "#" && hexValue[0] == '#' && hexValueLength > 1) {
         inputField.value = hexValue.slice(0, -1);
         hexValue = inputField.value;
+        hexValueLength = hexValue.length;
 
         resultTransp.textContent = hexValue.substring(7, 9);
         resultFullOrange.textContent= hexValue.substring(1, 7);
@@ -77,6 +81,13 @@ inputField.addEventListener('input', function() {
     if (inputField.value.length > 9) {
         inputField.value = hexValue.slice(0, -1);
     }
+
+    inputField.addEventListener('blur', function() {
+        if (inputField.value.length == 7) {
+            changeValues(100);
+            changeResult('FF');
+        }
+    });
 
     colorPreview.style.backgroundColor = inputField.value;
     
