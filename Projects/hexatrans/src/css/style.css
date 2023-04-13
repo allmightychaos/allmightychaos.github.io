@@ -340,3 +340,45 @@ footer span {
   position: static;
   margin-top: 50px;
 }
+
+.underConstruction {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.underConstruction .uCHeader {
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 5px;
+}
+.underConstruction .uCParagraph {
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.underConstruction #okaybutton {
+  width: 235px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #44DC9A;
+  color: #005237;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all ease-in-out;
+}
+.underConstruction #okaybutton:hover {
+  background-color: #26ce85;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.125), 0 0 8px 0 rgba(0, 0, 0, 0.125);
+}
