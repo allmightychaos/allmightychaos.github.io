@@ -537,3 +537,28 @@ function getResult(value) {
         changeResult('00');
     }
 }
+
+// Code will be removed in the future
+
+const okayButton = document.getElementById('okaybutton');
+const underConstruction = document.getElementsByClassName('underConstruction')[0];
+
+okayButton.addEventListener('click', () => {
+    for (let i = 0; i < 10; i++) {
+        setTimeout(() => {
+            underConstruction.style.opacity = 1 - (i * 0.1);
+        }, i * 50);
+    }
+    setTimeout(() => {
+        underConstruction.style.display = 'none';
+    }, 500);
+});
+
+if (localStorage.getItem('okaybutton') == 'true') {
+    underConstruction.style.display = 'none';
+}
+else {
+    okayButton.addEventListener('click', () => {
+        localStorage.setItem('okaybutton', 'true');
+    });
+}
